@@ -1,22 +1,26 @@
 body{
-    background-color: #fefae0;
+    background-color: #dedbd2;
 }
-p,ol,ul,strong,table{
-    color: #d4a373;
+p,ol,ul,strong,table,form{
+    color: #005f73;
 }
 h1,h2{
-    color: #a2d2ff;
+    color: #4a5759;
+}
+.evenrow{
+    background-color:#e9edc9;
 }
 nav a{
-    color: #ffafcc;
+    color: #b0c4b1;
+    background-color: #e9edc9;
     padding: 10px;
 }
 nav a:hover {
-    background-color: #ffe5ec;
+    background-color: #4a5759;
 }
 nav{
     margin-bottom: 30px;
 }
 a{
-    color: #e9edc9;
+    color: #0a9396;
 }
