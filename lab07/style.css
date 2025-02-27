@@ -13,13 +13,14 @@ h1,h2{
 nav a{
     color: #b0c4b1;
     background-color: #e9edc9;
-    padding: 10px;
 }
 nav a:hover {
     background-color: #4a5759;
 }
 nav{
+    padding: 10px;
     margin-bottom: 30px;
+    font-size: 1.2em;
 }
 a{
     color: #0a9396;
