@@ -1,0 +1,22 @@
+body{
+    background-color: #cdb4db;
+}
+p,ol,ul,strong{
+    color: #bde0fe;
+}
+h1,h2{
+    color: #a2d2ff;
+}
+nav a{
+    color: #ffafcc;
+    padding: 10px;
+}
+nav a:hover {
+    background-color: #ffe5ec;
+}
+nav{
+    margin-bottom: 30px;
+}
+link{
+    color: #e9edc9;
+}
