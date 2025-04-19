@@ -22,6 +22,9 @@ nav{
     margin-bottom: 30px;
     font-size: 1.2em;
 }
+span{
+    color: rgb(254, 254, 254);
+}
 a{
     color: #0a9396;
 }
