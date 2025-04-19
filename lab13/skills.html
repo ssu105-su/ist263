@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Skills</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+          @media (max-width: 768px) {
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+      }
+      nav span {
+        display: none;
+      }
+}
+          table, th, td {border: 1px solid black}
+          h1{
+            text-align: center;
+          }
+          p{ max-width: 1050px; } 
+          .img1, .img2, .img3, .img4, .img5{
+    width: 80px;
+    height: 80px;
+  }
+.flexbox2{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+}
+  .skills{
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+  }
+aside{
+    background-color:#4a5759;
+    border-radius: 1em;
+    padding: 20px
+}
+aside p{
+    color: #b0c4b1;
+}
+aside h2{
+    color: #b0c4b1;
+}
+
+.other{
+    float: right;
+}
+.skill{
+    margin: 60px;
+}
+      </style>
+    </head>
+    <body><nav>
+      <a href="index.html">Home</a><span>|</span>
+      <a href="skills.html">Skills</a><span>|</span>
+      <a href="contact.html">Contact</a>
+  </nav>
+  <div class="skill"><h1>Technical Skills</h1>
+    <p>I possess a diverse technical skillset spanning software development and multimedia production.  In programming, I am proficient in Python for scripting and backend development, complemented by strong expertise in HTML for web structure implementation. Additionally, I have developed professional competency in creative tools, specifically iMovie for video editing</p>
+</div>
+  <!-- 
+  <table>
+        <caption>Technical Skills</caption>
+        <tr>
+          <th>Category</th>
+          <th>Skill</th>
+          <th>Competancy Level</th>
+        </tr>
+        <tr class="evenrow">
+          <td>Coding</td>
+          <td>Python</td>
+          <td>Proficient</td>
+        </tr>
+        <tr>
+          <td>Coding</td>
+          <td>HTML</td>
+          <td>Proficient</td>
+        </tr>
+        <tr class="evenrow">
+            <td>Video Edit</td>
+            <td>iMovie</td>
+            <td>Proficient</td>
+          </tr>
+      </table>
+    -->
+<div class="flexbox2">
+  <div class="skills">
+    <div class="skill1">
+      <img src="../images/noun-python-6647256.png" class="img1" alt="python">
+      <p>Python</p>
+    </div>
+    <div class="skill2">
+      <img src="../images/noun-html-7564943.png" class="img2" alt="html">
+      <p>HTML</p>
+    </div>
+    <div class="skill3">
+      <img src="../images/noun-css-7643371.png" class="img3" alt="css">
+    <p>CSS</p>
+    </div>
+    <div class="skill4">
+      <img src="../images/noun-movie-811268.png" class="img4" alt="imovie">
+      <p>iMovie</p>
+    </div>
+    <div class="skill5">
+      <img src="../images/noun-edit-video-7338843.png" class="img5" alt="edit">
+      <p>Video Edit</p>
+    </div>
+  </div>
+  <div class="other">
+    <aside>
+      <h2>Other Skills</h2>
+      <p>Microsoft</p>
+      <p>Project Management</p>
+      <p>Photoshop</p>
+    </aside>
+  </div>
+</div>
+</body>
+</html>
