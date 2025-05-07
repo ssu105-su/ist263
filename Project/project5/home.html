@@ -1,36 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <nav>
-            <a href="home.html">Home</a><span>|</span>
-            <a href="recommandation.html">Recommandation</a><span>|</span>
-            <a href="clip.html">Video Clip</a>
-        </nav>
-    <div>
-        <div class="home">
-            <header><img src="../media/animeworld.jpeg" style="width: 1000px; height: auto;" class="world" alt="world"></header>
-            <h1>Welcome to the World of Anime!</h1>
-            <p>Welcome to Anim Sphere! Anime is more than just animated entertainment—it’s a vibrant art form that blends storytelling, artistry, and cultural expression. Originating in Japan, anime has captivated audiences worldwide with its diverse genres, from action-packed shonen to heartfelt slice-of-life dramas. Whether you’re a seasoned fan or new to the genre, join me in exploring the magic of animation!</p>
-        </div>
+<head>
+    <meta charset="utf-8">
+    <title>Neural Gateway | Anim Sphere</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Oxanium:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 100%, #0A0A1A, #1A1A2E);
+            color: #E0E0E0;
+            font-family: 'Oxanium', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                transparent 65%,
+                rgba(0, 240, 255, 0.1) 75%,
+                transparent 85%
+            );
+            animation: starTrail 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes starTrail {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(100%); }
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+        }
+
+        nav a {
+            color: #00F0FF;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0 1.5rem;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #FF1744;
+            text-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 3rem;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+        }
+
+        .world {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 10px;
+            border: 2px solid #9C27B0;
+            box-shadow: 0 0 40px rgba(156, 39, 176, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .world:hover {
+            transform: scale(1.01);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00F0FF;
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 2.8rem;
+            text-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            position: relative;
+        }
+
+        h1::after {
+            content: '▲';
+            position: absolute;
+            right: -1.5rem;
+            top: -0.5rem;
+            color: #FF1744;
+            font-size: 1.8rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        p::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -3px;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, 
+                #00F0FF 0%,
+                #9C27B0 50%,
+                #FF1744 100%
+            );
+        }
+
+        .form {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 240, 255, 0.2);
+        }
+
+        input[type="radio"], textarea, input[type="submit"] {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #00F0FF;
+            color: #E0E0E0;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            transition: all 0.3s;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(45deg, #00F0FF, #9C27B0);
+            border: none;
+            padding: 0.8rem 2rem;
+            cursor: pointer;
+            font-family: 'Orbitron';
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(45deg, #FF1744, #9C27B0);
+            box-shadow: 0 0 15px rgba(255, 23, 68, 0.5);
+        }
+
+        textarea:focus, input:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+        }
+
+        /* 数据流效果 */
+        @keyframes dataStream {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(100%); }
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 20%;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(0, 240, 255, 0.2) 50%,
+                transparent 100%
+            );
+            animation: dataStream 8s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="recommandation.html">Recommandation</a>
+        <a href="clip.html">Clip</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <img src="../media/animeworld.jpeg" class="world" alt="Holo-Sphere Interface">
+        </header>
+        
+        <h1>Welcome to the World of Anime!</h1>
+        
+        <p>
+            Welcome to Anim Sphere! Anime is more than just animated entertainment—it’s a vibrant art form that blends storytelling, artistry, and cultural expression. Originating in Japan, anime has captivated audiences worldwide with its diverse genres, from action-packed shonen to heartfelt slice-of-life dramas. Whether you’re a seasoned fan or new to the genre, join me in exploring the magic of animation!</p>
         <div class="form">
             <form action="https://formspree.io/f/xkgjvkkd" method="POST">
-            <strong>Have you ever watched anime?</strong><br>
-              <input type="radio" id="never" name="animehistory" value="never">
-              <label for="never">Never</label><br>
-              <input type="radio" id="few" name="animehistory" value="few">
-              <label for="few">Few</label><br>
-              <input type="radio" id="lot" name="fanimehistory" value="lot">
-              <label for="lot">A lot</label><br>
-            <label for="fav">If you always watch anime, write down your favorite anime: </label><br>
-            <textarea id="fav" name="fav" rows="3" cols="40" placeholder="What's your favorite anime?"></textarea>
-            <input type="submit" value="Send Form">
+                <strong>NEURAL IMPRINT ANALYSIS</strong><br><br>
+                <div class="radio-group">
+                      <input type="radio" id="never" name="animehistory" value="never">
+                      <label for="never">Protocol Not Initialized</label><br>
+                      <input type="radio" id="few" name="animehistory" value="few">
+                      <label for="few">Basic Familiarity</label><br>
+                      <input type="radio" id="lot" name="fanimehistory" value="lot">
+                      <label for="lot">Advanced Immersion</label><br>
+                </div>
+                <label for="fav">FAVORITE SIMULATION MODULE:</label><br>
+                <textarea id="fav" name="fav" rows="3" 
+                    placeholder="Enter module codename..."></textarea>
+                <input type="submit" value="UPLOAD IMPRINT">
             </form>
         </div>
     </div>
-
-    </body>
+</body>
+</html>

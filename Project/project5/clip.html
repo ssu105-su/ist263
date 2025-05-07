@@ -1,18 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Clip</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <nav>
-            <a href="home.html">Home</a><span>|</span>
-            <a href="recommandation.html">Recommandation</a><span>|</span>
-            <a href="clip.html">Video Clip</a>
-        </nav>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dJgqmZygHZk?si=5BHyVTzaEWDOLXkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
-        <h1>Alien Stage</h1>
-        <p>This dark science fiction story revolves around a deadly singing contest hosted by aliens. Earth becomes colonized by aliens, humans become pets of the aliens, and are forced to perform on a surreal stage where defeat or loss of votes will result in immediate death. alien stage shows the deep bond between the six characters and their determination to die for each other.</p><br>
-        <img src="../media/aliensatge.jpeg" class="aliensatge" style="width: 500px; height: auto;" alt="img5">
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>Alien Stage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Oxanium:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 50%, #1A1A2E, #0A0A1A);
+            color: #E0E0E0;
+            font-family: 'Oxanium', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem;
+            animation: nebulaPulse 20s infinite alternate;
+        }
+
+        @keyframes nebulaPulse {
+            0% { background-size: 100% 100%; }
+            100% { background-size: 120% 120%; }
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+        }
+
+        nav a {
+            color: #00F0FF;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0 1.5rem;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #FF1744;
+            text-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00F0FF;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00F0FF;
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 2.5rem;
+            text-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 0 0 10px rgba(0, 240, 255, 0.4); }
+            to { text-shadow: 0 0 25px rgba(0, 240, 255, 0.8), 0 0 35px rgba(0, 240, 255, 0.6); }
+        }
+
+        iframe {
+            display: block;
+            margin: 2rem auto;
+            border: 2px solid #00F0FF;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+            background: #000;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 1.5rem auto;
+            max-width: 800px;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #FF1744;
+            line-height: 1.8;
+        }
+
+        .aliensatge {
+            display: block;
+            margin: 2rem auto;
+            width: 600px;
+            border-radius: 10px;
+            border: 2px solid #9C27B0;
+            box-shadow: 0 0 25px rgba(156, 39, 176, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .aliensatge:hover {
+            transform: scale(1.02);
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent 0,
+                transparent 2px,
+                rgba(0, 240, 255, 0.05) 2px,
+                rgba(0, 240, 255, 0.05) 4px
+            );
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="recommandation.html">Recommandation</a>
+        <a href="clip.html">Clip</a>
+    </nav>
+    
+    <div class="container">
+        <iframe width="760" height="428" src="https://www.youtube.com/embed/dJgqmZygHZk" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        
+        <h1>▲LIE_N ST▲GE</h1>
+        
+        <p>This dark science fiction story revolves around a deadly singing contest hosted by aliens. Earth becomes colonized by aliens, humans become pets of the aliens, and are forced to perform on a surreal stage where defeat or loss of votes will result in immediate death.</p>
+        <p>Alien stage shows the deep bond between the six characters and their determination to die for each other<br>
+           </p>
+        
+        <img src="../media/aliensatge.jpeg" class="aliensatge" alt="Neural Interface Capture">
+    </div>
+</body>
+</html>
